@@ -12,6 +12,8 @@ public class LaserEmitter : MonoBehaviour
     //private List<GameObject> collisionParticlesList;
     private List<Vector3> positionTestList;
     private GameObject myLaser;
+    public GameObject[] arrayPrefabs;
+    public string state = "l1";
     private VolumetricMultiLineBehavior myLaserBehavior;
     private void Start ()
     {
@@ -41,6 +43,43 @@ public class LaserEmitter : MonoBehaviour
                 direction = Vector3.Reflect( direction, hit.normal );
                 position = hit.point;
                 positionTestList.Add( position );
+                if (hit.transform.tag == "exit" && positionTestList.Count == maxReflectionCount)
+                {
+                    Destroy(myLaser);
+                    print("S'ha guanyat el nivell");
+                    switch(state)
+                    {
+                        case "l1":
+                            state = "l2";
+                            Instantiate(arrayPrefabs[1]);
+                            Destroy(arrayPrefabs[0]);
+                            break;
+                        case "l2":
+                            state = "l3";
+                            Instantiate(arrayPrefabs[2]);
+                            Destroy(arrayPrefabs[1]);
+                            break;
+                        case "l3":
+                            state = "l4";
+                            Instantiate(arrayPrefabs[3]);
+                            Destroy(arrayPrefabs[2]);
+                            break;
+                        case "l4":
+                            state = "l5";
+                            Instantiate(arrayPrefabs[5]);
+                            Destroy(arrayPrefabs[3]);
+                            break;
+                        case "l5":
+                            print("S'ha guanyat el joc");
+                            break;
+
+                    }
+
+                }
+                else if (hit.transform.tag == "exit" && positionTestList.Count == maxReflectionCount)
+                {
+                    print("No hi ha el límit de miralls a la partida");
+                }
                 //collisionParticlesList.Add(Instantiate(particlesPrefab, position,Quaternion.identity));
             }
             else
@@ -55,8 +94,10 @@ public class LaserEmitter : MonoBehaviour
         myLaserBehavior = myLaser.GetComponent<VolumetricMultiLineBehavior>();
         myLaserBehavior.m_lineVertices = positionTestList.ToArray();
     }
+
+
     //void OnDrawGizmos()
-    //{
+    //{ 
     //    DrawPredictedReflectionPattern(this.transform.position + this.transform.forward * 0.75f, this.transform.forward, maxReflectionCount);
     //}
     //private void DrawPredictedReflectionPattern(Vector3 position, Vector3 direction, int reflectionsRemaining)
