@@ -8,6 +8,8 @@ public class LaserEmitter : MonoBehaviour
     public int maxReflectionCount = 5;
     public float maxStepDistance = 200;
     public GameObject volumetricLinePrefab;
+    public bool debug;
+
     //public GameObject particlesPrefab;
     //private List<GameObject> collisionParticlesList;
     private List<Vector3> positionTestList;
@@ -15,6 +17,8 @@ public class LaserEmitter : MonoBehaviour
     public GameObject[] arrayPrefabs;
     public string state = "l1";
     private VolumetricMultiLineBehavior myLaserBehavior;
+
+
     private void Start ()
     {
         //collisionParticlesList = new List<GameObject>();
@@ -43,42 +47,43 @@ public class LaserEmitter : MonoBehaviour
                 direction = Vector3.Reflect( direction, hit.normal );
                 position = hit.point;
                 positionTestList.Add( position );
-                if (hit.transform.tag == "exit" && positionTestList.Count == maxReflectionCount)
+                print( "HIT!" );
+                if ( hit.transform.tag == "exit" && positionTestList.Count == maxReflectionCount )
                 {
-                    Destroy(myLaser);
-                    print("S'ha guanyat el nivell");
-                    switch(state)
+                    Destroy( myLaser );
+                    print( "S'ha guanyat el nivell" );
+                    switch ( state )
                     {
                         case "l1":
                             state = "l2";
-                            Instantiate(arrayPrefabs[1]);
-                            Destroy(arrayPrefabs[0]);
+                            Instantiate( arrayPrefabs[ 1 ] );
+                            Destroy( arrayPrefabs[ 0 ] );
                             break;
                         case "l2":
                             state = "l3";
-                            Instantiate(arrayPrefabs[2]);
-                            Destroy(arrayPrefabs[1]);
+                            Instantiate( arrayPrefabs[ 2 ] );
+                            Destroy( arrayPrefabs[ 1 ] );
                             break;
                         case "l3":
                             state = "l4";
-                            Instantiate(arrayPrefabs[3]);
-                            Destroy(arrayPrefabs[2]);
+                            Instantiate( arrayPrefabs[ 3 ] );
+                            Destroy( arrayPrefabs[ 2 ] );
                             break;
                         case "l4":
                             state = "l5";
-                            Instantiate(arrayPrefabs[5]);
-                            Destroy(arrayPrefabs[3]);
+                            Instantiate( arrayPrefabs[ 5 ] );
+                            Destroy( arrayPrefabs[ 3 ] );
                             break;
                         case "l5":
-                            print("S'ha guanyat el joc");
+                            print( "S'ha guanyat el joc" );
                             break;
 
                     }
 
                 }
-                else if (hit.transform.tag == "exit" && positionTestList.Count == maxReflectionCount)
+                else if ( hit.transform.tag == "exit" && positionTestList.Count == maxReflectionCount )
                 {
-                    print("No hi ha el límit de miralls a la partida");
+                    print( "No hi ha el límit de miralls a la partida" );
                 }
                 //collisionParticlesList.Add(Instantiate(particlesPrefab, position,Quaternion.identity));
             }
@@ -96,30 +101,36 @@ public class LaserEmitter : MonoBehaviour
     }
 
 
-    //void OnDrawGizmos()
-    //{ 
-    //    DrawPredictedReflectionPattern(this.transform.position + this.transform.forward * 0.75f, this.transform.forward, maxReflectionCount);
-    //}
-    //private void DrawPredictedReflectionPattern(Vector3 position, Vector3 direction, int reflectionsRemaining)
-    //{
-    //    if (reflectionsRemaining == 0)
-    //    {
-    //        return;
-    //    }
-    //    Vector3 startingPosition = position;
-    //    Ray ray = new Ray(position, direction);
-    //    RaycastHit hit;
-    //    if (Physics.Raycast(ray, out hit, maxStepDistance))
-    //    {
-    //        direction = Vector3.Reflect(direction, hit.normal);
-    //        position = hit.point;
-    //    }
-    //    else
-    //    {
-    //        position += direction * maxStepDistance;
-    //    }
-    //    Gizmos.DrawLine(startingPosition, position);
-    //    //print(startingPosition+" - "+position);
-    //    DrawPredictedReflectionPattern(position, direction, reflectionsRemaining - 1);
-    //}
+    void OnDrawGizmos ()
+    {
+        if ( debug )
+        {
+            DrawPredictedReflectionPattern( this.transform.position + this.transform.forward * 0.75f, this.transform.forward, maxReflectionCount );
+        }
+    }
+    private void DrawPredictedReflectionPattern ( Vector3 position, Vector3 direction, int reflectionsRemaining )
+    {
+        if ( debug )
+        {
+            if ( reflectionsRemaining == 0 )
+            {
+                return;
+            }
+            Vector3 startingPosition = position;
+            Ray ray = new Ray( position, direction );
+            RaycastHit hit;
+            if ( Physics.Raycast( ray, out hit, maxStepDistance ) )
+            {
+                direction = Vector3.Reflect( direction, hit.normal );
+                position = hit.point;
+            }
+            else
+            {
+                position += direction * maxStepDistance;
+            }
+            Gizmos.DrawLine( startingPosition, position );
+            //print(startingPosition+" - "+position);
+            DrawPredictedReflectionPattern( position, direction, reflectionsRemaining - 1 );
+        }
+    }
 }

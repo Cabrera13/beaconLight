@@ -111,21 +111,9 @@ MonoBehaviour:
   maxStepDistance: 200
   volumetricLinePrefab: {fileID: 8871160296560746453, guid: f007d19e5fcbea9429b35f4bb9368ed3,
     type: 3}
---- !u!111 &4094699982875776995
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6841802309202048023}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 7906b215b12c0c845b2d600a0ad18954, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  debug: 0
+  arrayPrefabs: []
+  state: l1
 --- !u!1001 &1487068111560501126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -271,12 +259,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9500000, guid: 170ec1f7cb90c0a408b2169fd9e44a2b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 170ec1f7cb90c0a408b2169fd9e44a2b, type: 3}
---- !u!1 &6841802309202048023 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 170ec1f7cb90c0a408b2169fd9e44a2b,
-    type: 3}
-  m_PrefabInstance: {fileID: 6841802309202014903}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6841802309201618999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 170ec1f7cb90c0a408b2169fd9e44a2b,
