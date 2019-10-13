@@ -4,35 +4,57 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour
 {
-    public LaserEmitter laserEmitter;
-    public GameObject[] arrayPrefabs;
-    public GameObject[] arrayFather;
-    public int level = 1;
+    public int startingLevel = 1;
+    private int currentLevel;
+    public GameObject levelMarker;
+    public Level[] levels;
+
+    private GameObject levelGameobject;
+    private LaserEmitter laserEmitter;
+
+    void Start()
+    {
+        currentLevel = startingLevel;
+        LoadLevel(startingLevel);
+    }
 
     void Update()
     {
-        if (laserEmitter.hit.transform.tag == "exit")
+        if (laserEmitter != null)
         {
-            if (laserEmitter.positionTestList.Count == laserEmitter.maxReflectionCount-1)
+            if (laserEmitter.GetHitObjectTag() == "exit")
             {
-                Destroy(laserEmitter.myLaser);
-                print("S'ha guanyat el nivell");
-
-                if (level == 5)
+                if (laserEmitter.GetReflectionsCount() >= levels[currentLevel-1].minimumReflections)
                 {
-                    print("S'ha guanyat el joc");
+                    Destroy(laserEmitter.myLaser);
+                    print("S'ha guanyat el nivell");
+
+                    if (currentLevel == 5) Win(); else NextLevel();
                 }
                 else
                 {
-                    Instantiate(arrayPrefabs[level], arrayFather[level].transform);
-                    Destroy(arrayPrefabs[level-1]);
-                    level++;
+                    print("You need more reflections to pass this level.");
                 }
             }
-            else if (laserEmitter.positionTestList.Count < laserEmitter.maxReflectionCount-1)
-            {
-                print("S'esta tocant el final pero no hi han suficients miralls a la partida");
-            }
         }
+    }
+
+    void NextLevel ()
+    {
+        Destroy(levelGameobject);
+        currentLevel++;
+        LoadLevel(currentLevel);
+    }
+    void LoadLevel (int level)
+    {
+        levelGameobject = Instantiate(levels[level-1].prefab, levelMarker.transform);
+        levelGameobject.transform.position = new Vector3(levelGameobject.transform.position.x-1.5f,levelGameobject.transform.position.y,levelGameobject.transform.position.z-1.5f);
+        laserEmitter = levelGameobject.GetComponentInChildren<LaserEmitter>();
+        laserEmitter.maxReflectionCount = levels[level-1].maximumReflections;
+    }
+
+    void Win()
+    {
+        print("You won");
     }
 }

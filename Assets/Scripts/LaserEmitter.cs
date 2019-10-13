@@ -6,11 +6,11 @@ using VolumetricLines;
 public class LaserEmitter : MonoBehaviour
 {
     public Ray ray;
-    public RaycastHit hit;
+    private RaycastHit hit;
     public int maxReflectionCount = 5;
     public float maxStepDistance = 200;
     public GameObject volumetricLinePrefab;
-    public bool showReflectionsInEditor;
+    public bool showReflectionsInEditor = true;
 
     //public GameObject particlesPrefab;
     //private List<GameObject> collisionParticlesList;
@@ -25,7 +25,7 @@ public class LaserEmitter : MonoBehaviour
     }
     private void FixedUpdate ()
     {
-        DrawPredictedReflection( this.transform.position + this.transform.forward * 0.75f, this.transform.forward, maxReflectionCount );
+        DrawPredictedReflection( this.transform.position + this.transform.forward * 0.1f, this.transform.forward, maxReflectionCount );
     }
     private void DrawPredictedReflection ( Vector3 position, Vector3 direction, int reflectionsRemaining )
     {
@@ -65,6 +65,19 @@ public class LaserEmitter : MonoBehaviour
         myLaserBehavior.m_lineVertices = positionTestList.ToArray();
     }
     
+    public string GetHitObjectTag()
+    {
+        try {
+            return hit.transform.tag;
+        } catch{return "";}
+    }
+
+    public int GetReflectionsCount()
+    {
+        // Reflections less beginning and ending.
+        return positionTestList.Count-2;
+    }
+
     void OnDrawGizmos ()
     {
         if ( showReflectionsInEditor )
