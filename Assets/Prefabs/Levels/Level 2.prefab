@@ -840,17 +840,17 @@ PrefabInstance:
     - target: {fileID: 9017731861861565146, guid: 67f02adb3d79895489b5ed7a3b9de351,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.45
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9017731861861565146, guid: 67f02adb3d79895489b5ed7a3b9de351,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.999362e-17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9017731861861565146, guid: 67f02adb3d79895489b5ed7a3b9de351,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.83
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9017731861861565146, guid: 67f02adb3d79895489b5ed7a3b9de351,
         type: 3}
@@ -917,6 +917,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3397467774043120123}
     m_Modifications:
+    - target: {fileID: 5404377827127100476, guid: 08ae41915ee56344c988dec44610e1d6,
+        type: 3}
+      propertyPath: m_Name
+      value: Laser Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 5404377827127100478, guid: 08ae41915ee56344c988dec44610e1d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -971,11 +976,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5404377827127100476, guid: 08ae41915ee56344c988dec44610e1d6,
-        type: 3}
-      propertyPath: m_Name
-      value: Laser Tower
       objectReference: {fileID: 0}
     - target: {fileID: 5404377827249254530, guid: 08ae41915ee56344c988dec44610e1d6,
         type: 3}
@@ -1266,6 +1266,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3397467774043120123}
     m_Modifications:
+    - target: {fileID: 5404377827127100476, guid: 1b92f62aa4eaf9f45ab9756bd318653e,
+        type: 3}
+      propertyPath: m_Name
+      value: Laser Receiver
+      objectReference: {fileID: 0}
     - target: {fileID: 5404377827127100478, guid: 1b92f62aa4eaf9f45ab9756bd318653e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1320,11 +1325,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5404377827127100476, guid: 1b92f62aa4eaf9f45ab9756bd318653e,
-        type: 3}
-      propertyPath: m_Name
-      value: Laser Receiver
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b92f62aa4eaf9f45ab9756bd318653e, type: 3}

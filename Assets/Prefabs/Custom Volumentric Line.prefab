@@ -46,7 +46,7 @@ MonoBehaviour:
   m_templateMaterial: {fileID: 2100000, guid: 974b33ccbd786464a825203eb88b8dab, type: 2}
   m_doNotOverwriteTemplateMaterialProperties: 0
   m_lineColor: {r: 1, g: 0.019000754, b: 0, a: 1}
-  m_lineWidth: 0.01
+  m_lineWidth: 0.1
   m_lightSaberFactor: 0.8
   m_lineVertices:
   - {x: 70, y: 80, z: 0}
