@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5404377827127100478}
   m_Layer: 0
   m_Name: Laser Tower
-  m_TagString: Untagged
+  m_TagString: mirror
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,12 +108,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxReflectionCount: 5
+  gameLogic: {fileID: 0}
   maxStepDistance: 200
   volumetricLinePrefab: {fileID: 8871160296560746453, guid: f007d19e5fcbea9429b35f4bb9368ed3,
     type: 3}
-  debug: 0
-  arrayPrefabs: []
-  state: l1
+  showReflectionsInEditor: 1
+  positionTestList: []
+  myLaser: {fileID: 0}
 --- !u!1001 &1487068111560501126
 PrefabInstance:
   m_ObjectHideFlags: 0

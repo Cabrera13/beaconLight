@@ -8,6 +8,7 @@ public class LaserEmitter : MonoBehaviour
     public Ray ray;
     private RaycastHit hit;
     public int maxReflectionCount = 5;
+    public GameObject gameLogic;
     public float maxStepDistance = 200;
     public GameObject volumetricLinePrefab;
     public bool showReflectionsInEditor = true;
@@ -16,6 +17,7 @@ public class LaserEmitter : MonoBehaviour
     //private List<GameObject> collisionParticlesList;
 
     public List<Vector3> positionTestList;
+    [HideInInspector] public int reflectionsCount;
     public GameObject myLaser;
     private VolumetricMultiLineBehavior myLaserBehavior;
 
@@ -45,10 +47,20 @@ public class LaserEmitter : MonoBehaviour
             
             if ( Physics.Raycast( ray, out hit, maxStepDistance ) )
             {
-
-                direction = Vector3.Reflect( direction, hit.normal );
-                position = hit.point;
-                positionTestList.Add( position );
+                if (hit.transform.tag == "exit") {
+                    GameObject.Find("Game Controller").GetComponent<GameLogic>().isHitting = true;
+                }
+                else if (hit.transform.tag == "mirror") {
+                    direction = Vector3.Reflect( direction, hit.normal );
+                    position = hit.point;
+                    positionTestList.Add( position );
+                    reflectionsCount++;
+                }
+                else {
+                    position = hit.point;
+                    positionTestList.Add( position );
+                    reflectionsCount = 0;
+                }
 
                 //collisionParticlesList.Add(Instantiate(particlesPrefab, position,Quaternion.identity));
             }
@@ -70,12 +82,6 @@ public class LaserEmitter : MonoBehaviour
         try {
             return hit.transform.tag;
         } catch{return "";}
-    }
-
-    public int GetReflectionsCount()
-    {
-        // Reflections less beginning and ending.
-        return positionTestList.Count-2;
     }
 
     void OnDrawGizmos ()

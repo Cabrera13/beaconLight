@@ -11,6 +11,7 @@ public class GameLogic : MonoBehaviour
 
     private GameObject levelGameobject;
     private LaserEmitter laserEmitter;
+    public bool isHitting = false;
 
     void Start()
     {
@@ -20,21 +21,20 @@ public class GameLogic : MonoBehaviour
 
     void Update()
     {
-        if (laserEmitter != null)
-        {
-            if (laserEmitter.GetHitObjectTag() == "exit")
+        if (isHitting)
+        {   
+            if (laserEmitter.reflectionsCount >= levels[currentLevel-1].minimumReflections)
             {
-                if (laserEmitter.GetReflectionsCount() >= levels[currentLevel-1].minimumReflections)
-                {
-                    Destroy(laserEmitter.myLaser);
-                    print("S'ha guanyat el nivell");
+                Destroy(laserEmitter.myLaser);
 
-                    if (currentLevel == 5) Win(); else NextLevel();
-                }
-                else
-                {
-                    print("You need more reflections to pass this level.");
-                }
+                print("Level passed");
+
+                if (currentLevel == 5) Win(); else NextLevel();
+            }
+            else
+            {
+                print("You need more reflections to pass this level.");
+                isHitting = false;
             }
         }
     }
@@ -43,6 +43,7 @@ public class GameLogic : MonoBehaviour
     {
         Destroy(levelGameobject);
         currentLevel++;
+        isHitting = false;
         LoadLevel(currentLevel);
     }
     void LoadLevel (int level)

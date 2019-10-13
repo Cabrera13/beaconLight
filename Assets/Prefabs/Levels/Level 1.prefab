@@ -1647,6 +1647,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3397467774043120123}
     m_Modifications:
+    - target: {fileID: 1961108511474974, guid: 480bfc433ac750945843203e8e2500bb, type: 3}
+      propertyPath: m_Name
+      value: Pine 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4471669666380506, guid: 480bfc433ac750945843203e8e2500bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4
@@ -1702,10 +1706,6 @@ PrefabInstance:
     - target: {fileID: 4471669666380506, guid: 480bfc433ac750945843203e8e2500bb, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1961108511474974, guid: 480bfc433ac750945843203e8e2500bb, type: 3}
-      propertyPath: m_Name
-      value: Pine 2
       objectReference: {fileID: 0}
     - target: {fileID: 33918865734844462, guid: 480bfc433ac750945843203e8e2500bb,
         type: 3}
@@ -2927,6 +2927,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3397467774043120123}
     m_Modifications:
+    - target: {fileID: 656232186034288421, guid: 67f02adb3d79895489b5ed7a3b9de351,
+        type: 3}
+      propertyPath: m_Name
+      value: Wiremesh_01a_snaps005
+      objectReference: {fileID: 0}
     - target: {fileID: 9017731861861565146, guid: 67f02adb3d79895489b5ed7a3b9de351,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2982,11 +2987,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 656232186034288421, guid: 67f02adb3d79895489b5ed7a3b9de351,
-        type: 3}
-      propertyPath: m_Name
-      value: Wiremesh_01a_snaps005
-      objectReference: {fileID: 0}
     - target: {fileID: 7138141225965055931, guid: 67f02adb3d79895489b5ed7a3b9de351,
         type: 3}
       propertyPath: m_Mesh
@@ -2996,6 +2996,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2262580128236361397, guid: 67f02adb3d79895489b5ed7a3b9de351,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67f02adb3d79895489b5ed7a3b9de351, type: 3}
@@ -3642,6 +3647,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3397467774043120123}
     m_Modifications:
+    - target: {fileID: 5404377827127100476, guid: 08ae41915ee56344c988dec44610e1d6,
+        type: 3}
+      propertyPath: m_Name
+      value: Laser Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 5404377827127100478, guid: 08ae41915ee56344c988dec44610e1d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3696,11 +3706,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5404377827127100476, guid: 08ae41915ee56344c988dec44610e1d6,
-        type: 3}
-      propertyPath: m_Name
-      value: Laser Tower
       objectReference: {fileID: 0}
     - target: {fileID: 5404377827249254530, guid: 08ae41915ee56344c988dec44610e1d6,
         type: 3}
@@ -4351,6 +4356,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3397467774043120123}
     m_Modifications:
+    - target: {fileID: 404122082114397354, guid: 362c9c018432b7348b9af1f28d9cda4b,
+        type: 3}
+      propertyPath: m_Name
+      value: BrickPallet_01a_snaps005 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 102288542390432646, guid: 362c9c018432b7348b9af1f28d9cda4b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4421,11 +4431,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 404122082114397354, guid: 362c9c018432b7348b9af1f28d9cda4b,
-        type: 3}
-      propertyPath: m_Name
-      value: BrickPallet_01a_snaps005 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 8201864988786634468, guid: 362c9c018432b7348b9af1f28d9cda4b,
         type: 3}
       propertyPath: m_Mesh
@@ -4435,6 +4440,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172230944011535939, guid: 362c9c018432b7348b9af1f28d9cda4b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 362c9c018432b7348b9af1f28d9cda4b, type: 3}
@@ -4451,6 +4461,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3397467774043120123}
     m_Modifications:
+    - target: {fileID: 404122082114397354, guid: 362c9c018432b7348b9af1f28d9cda4b,
+        type: 3}
+      propertyPath: m_Name
+      value: BrickPallet_01a_snaps005
+      objectReference: {fileID: 0}
     - target: {fileID: 102288542390432646, guid: 362c9c018432b7348b9af1f28d9cda4b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4521,11 +4536,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 404122082114397354, guid: 362c9c018432b7348b9af1f28d9cda4b,
-        type: 3}
-      propertyPath: m_Name
-      value: BrickPallet_01a_snaps005
-      objectReference: {fileID: 0}
     - target: {fileID: 8201864988786634468, guid: 362c9c018432b7348b9af1f28d9cda4b,
         type: 3}
       propertyPath: m_Mesh
@@ -4535,6 +4545,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172230944011535939, guid: 362c9c018432b7348b9af1f28d9cda4b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 362c9c018432b7348b9af1f28d9cda4b, type: 3}
@@ -4726,6 +4741,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 723360201939274626, guid: ee0eb3e38e0cd394e87b7fb6ab7fb06a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee0eb3e38e0cd394e87b7fb6ab7fb06a, type: 3}
 --- !u!4 &4469722760709501978 stripped
@@ -4846,6 +4866,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3397467774043120123}
     m_Modifications:
+    - target: {fileID: 5404377827127100476, guid: 1b92f62aa4eaf9f45ab9756bd318653e,
+        type: 3}
+      propertyPath: m_Name
+      value: Laser Receiver
+      objectReference: {fileID: 0}
     - target: {fileID: 5404377827127100478, guid: 1b92f62aa4eaf9f45ab9756bd318653e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4900,11 +4925,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5404377827127100476, guid: 1b92f62aa4eaf9f45ab9756bd318653e,
-        type: 3}
-      propertyPath: m_Name
-      value: Laser Receiver
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b92f62aa4eaf9f45ab9756bd318653e, type: 3}

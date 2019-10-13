@@ -285,6 +285,7 @@ MonoBehaviour:
     minimumReflections: 13
     maximumReflections: 20
     availableMirrors: 4
+  isHitting: 0
 --- !u!4 &489832841 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8124997657269702819, guid: 4168e888d1a7500478be30a2597434be,
@@ -1616,6 +1617,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7277980802532763282, guid: 77a0be888381d004eb4a6b8d9133adc5,
+        type: 3}
+      propertyPath: m_TagString
+      value: mirror
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77a0be888381d004eb4a6b8d9133adc5, type: 3}
 --- !u!1001 &7254523241550767557
@@ -1699,6 +1705,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786523026323360676, guid: bb18a55f09a8ce2489c47e6b22a220a5,
+        type: 3}
+      propertyPath: m_TagString
+      value: mirror
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18a55f09a8ce2489c47e6b22a220a5, type: 3}
@@ -1784,6 +1795,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1615849289523678379, guid: a3ec2684c9be5c941a5f83d2de846141,
+        type: 3}
+      propertyPath: m_TagString
+      value: mirror
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3ec2684c9be5c941a5f83d2de846141, type: 3}
 --- !u!1001 &8124997656947937578
@@ -1867,6 +1883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 911966949726057937, guid: 4168e888d1a7500478be30a2597434be,
+        type: 3}
+      propertyPath: m_TagString
+      value: mirror
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4168e888d1a7500478be30a2597434be, type: 3}
