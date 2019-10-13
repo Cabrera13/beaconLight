@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="biene04" size="1.000000 1.139229" />
-    <ImageTarget name="biene01" size="1.000000 1.086716" />
-    <ImageTarget name="biene03" size="1.000000 1.384333" />
-    <ImageTarget name="biene02" size="1.000000 1.314438" />
-    <ImageTarget name="Tstimg02" size="1.000000 0.994505" />
+    <ImageTarget name="logo-hackupc" size="1.000000 1.000000" />
+    <ImageTarget name="biene-tambor" size="1.000000 1.000000" />
+    <ImageTarget name="biene-gamer" size="1.000000 1.000000" />
+    <ImageTarget name="biene-cocinero" size="1.000000 1.000000" />
+    <ImageTarget name="biene-leche" size="1.000000 1.000000" />
   </Tracking>
 </QCARConfig>
